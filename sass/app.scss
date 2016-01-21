@@ -1,0 +1,165 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+/*VARIABLES*/
+
+/*COLOR SETTINGS*/
+$main-clr-txt: #4e4e4e;
+$main-clr-header: #e6e6e6;
+$link-clr: #4e4e4e;
+$link-clr-active: #1abb9c;
+$main-clr-bg: #f7f7f7;
+$tags-clr: #bbbbbb;
+$border-clr: #e4e4e4;
+$blockquote-clr-bg: #efefef;
+$blockquote-clr-txt: #4e4e4e;
+$main-clr-footer: #4e4e4e;
+
+/*SIZE SETTINGS*/
+$main-line-height: 1.6em;
+
+
+* {
+    font-family: Trebuchet MS;    
+}
+
+body, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style-type: none;    
+}
+
+a {
+    text-decoration: none;    
+}
+
+/*FLOATS CLEARFIX*/
+header:after, .selling-points:after, .latest-works:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/*MAIN STYLES*/
+p, li, h1, h2, h3, h4 {
+    color: $main-clr-txt;    
+}
+
+body {
+    background-color: $main-clr-bg;    
+}
+
+.wrapper {
+    width: 960px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+header {
+    background-color: $main-clr-header;
+    padding: 20px 0;    
+    h1 {
+        margin: 0;
+        text-indent: -10000px;
+        background: url(../img/logo.png) no-repeat;
+        width: 130px;
+        float: left;
+    }    
+    nav {
+        float: right;
+        h2 {
+            line-height: 0;
+            margin: 0;
+            text-indent: -10000px;    
+        }
+        li {
+            float: left;
+            margin-left: 20px;
+            margin-top: 10px;
+            a {
+                color: $link-clr;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            a.current {
+                color: $link-clr-active;    
+            }
+        }
+    }    
+}
+
+/*MAIN BANNER*/
+#main-banner {
+    max-height: 500px;
+    overflow: hidden;
+    img {
+        width: 100%;    
+    }
+}
+
+/*SELLING POINTS*/
+.selling-points {
+    margin-top: 60px;
+    li {
+        float: left;
+        width: 23%;
+        padding: 1%;
+        text-align: center;
+        line-height: $main-line-height;
+    }    
+}
+
+/*LATEST WORKS SECTION*/
+.latest-works {
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 2px solid $border-clr;
+    h2 {
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-bottom: 40px;
+    }    
+    li {
+        width: 32%;
+        float: left;
+    }    
+     li:nth-child(2) {
+        margin: 0 2%;    
+    }    
+    img {
+        width: 100%;    
+    }    
+    h3 {
+        margin-bottom: 0;    
+    }    
+    p {
+        line-height: $main-line-height;    
+    } 
+}
+
+p.tags {
+    color: $tags-clr;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.quote {
+    margin-top: 60px;
+    width: 60%;
+    padding: 40px 20%;
+    background: url('../img/quotes.png') no-repeat center 20px;
+    background-color: $blockquote-clr-bg;
+    color: $blockquote-clr-txt;
+    font-size: 20px;
+    line-height: $main-line-height;
+    text-align: center;
+}
+
